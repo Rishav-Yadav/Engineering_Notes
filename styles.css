@@ -47,8 +47,7 @@ body {
 
 .workspace-header,
 .workspace-footer,
-.section-heading.with-action,
-.header-status-group {
+.section-heading.with-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -90,11 +89,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.header-status-group {
-  justify-content: flex-end;
-  flex-wrap: wrap;
-}
-
 .document-status {
   display: inline-flex;
   align-items: center;
@@ -113,19 +107,7 @@ h2 {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #8a6c55;
-}
-
-.document-status.connected .status-dot {
   background: #677f55;
-}
-
-.document-status.offline .status-dot {
-  background: #9b5c4e;
-}
-
-.save-status {
-  color: var(--accent-dark);
 }
 
 .panel {
@@ -233,19 +215,11 @@ h2 {
   background: #ebcbc4;
 }
 
-.field-note,
 .inline-status {
+  min-height: 1.4em;
   margin: 10px 0 0;
   color: var(--muted);
   font-size: 0.87rem;
-}
-
-.field-note {
-  max-width: 780px;
-}
-
-.inline-status {
-  min-height: 1.4em;
   font-weight: 600;
 }
 
@@ -338,8 +312,7 @@ h2 {
 
   .workspace-header,
   .workspace-footer,
-  .section-heading.with-action,
-  .header-status-group {
+  .section-heading.with-action {
     align-items: flex-start;
     flex-direction: column;
   }

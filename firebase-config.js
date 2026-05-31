@@ -1,13 +1,8 @@
-// Firebase configuration for Engineering Notebook.
-//
-// Replace every placeholder below with the config values from your Firebase
-// Console: Project settings > General > Your apps > Web app > SDK setup and configuration.
-// Keep this file deployed with index.html so script.js can initialize Firestore.
-export const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_PROJECT_ID.firebaseapp.com',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_PROJECT_ID.firebasestorage.app',
-  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+const firebaseConfig = {
+  apiKey: "AIzaSyA_j_du12dLn2JXnkcR6x0yNT7iebhGZSk",
+  authDomain: "engineeringnotes-d530a.firebaseapp.com",
+  projectId: "engineeringnotes-d530a",
+  storageBucket: "engineeringnotes-d530a.firebasestorage.app",
+  messagingSenderId: "612162257887",
+  appId: "1:612162257887:web:c59c2adccda6bc5b547a6a"
 };
