@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Notebook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="notebook-shell">
+    <header class="workspace-header">
+      <div>
+        <p class="eyebrow">Firmware Analysis Workspace</p>
+        <h1>Engineering Notebook</h1>
+      </div>
+      <div class="header-status-group">
+        <div id="cloudStatus" class="document-status" aria-live="polite">
+          <span class="status-dot"></span>
+          Cloud Sync: Offline
+        </div>
+        <div id="saveStatus" class="document-status save-status" aria-live="polite">Saved</div>
+      </div>
+    </header>
+
+    <section class="panel topic-panel" aria-labelledby="topic-heading">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <h2 id="topic-heading">Topic</h2>
+      </div>
+      <label class="visually-hidden" for="topicInput">Topic</label>
+      <input id="topicInput" class="single-line-input" type="text" placeholder="MK34 Hardware Initialization" autocomplete="off" />
+    </section>
+
+    <section class="panel" aria-labelledby="question-heading">
+      <div class="section-heading with-action">
+        <div>
+          <span class="section-number">02</span>
+          <h2 id="question-heading">Question</h2>
+        </div>
+        <button id="copyButton" class="button button-primary" type="button">Copy For Mobile</button>
+      </div>
+      <label class="visually-hidden" for="questionInput">Technical question</label>
+      <textarea id="questionInput" class="question-input" placeholder="Type a technical question, firmware trace note, or investigation prompt here..."></textarea>
+      <p class="field-note">Cloud sync saves this notebook to Firestore so the same Netlify URL can be opened from desktop or mobile.</p>
+      <p id="copyStatus" class="inline-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel document-panel" aria-labelledby="technical-notes-heading">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <h2 id="technical-notes-heading">Technical Notes</h2>
+      </div>
+      <div class="document-frame">
+        <div id="technicalNotes" class="technical-notes" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Technical notes reading area" data-placeholder="Paste technical responses, register analysis, boot traces, or documentation excerpts here..."></div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="personal-notes-heading">
+      <div class="section-heading">
+        <span class="section-number">04</span>
+        <h2 id="personal-notes-heading">Personal Notes</h2>
+      </div>
+      <label class="visually-hidden" for="personalNotes">Personal observations</label>
+      <textarea id="personalNotes" class="personal-notes" placeholder="Optional observations, hypotheses, follow-up checks, or lab notes..."></textarea>
+    </section>
+
+    <footer class="workspace-footer">
+      <p>Last Updated: <time id="lastUpdated">Not yet updated</time></p>
+      <div class="footer-actions">
+        <button id="updateTimestamp" class="button" type="button">Update Timestamp</button>
+        <button id="clearNotebook" class="button button-danger" type="button">Clear Notebook</button>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
